@@ -45,15 +45,24 @@ public class F2 extends Fragment {
     }
 
     private void sendMyText() {
-        sendNoInterface();
+        sendWithInterface();
     }
 
     private void sendNoInterface() {
 
     }
+    private void sendWithInterface() {
+    IF3Interface tA = (IF3Interface) getActivity();
+        tA.iSend21(et2.getText().toString());
+    }
 
     public void setMyET(String s){
         et2.setText(s);
     }
+
+    public interface IF3Interface{
+        public void iSend21(String s);
+    }
+
 
 }

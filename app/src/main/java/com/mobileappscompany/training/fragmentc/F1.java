@@ -62,5 +62,8 @@ public class F1 extends Fragment {
         public void iSend22(String s);
     }
 
+    public void setMyET(String s){
+        et1.setText(s);
+    }
 
 }
