@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements F1.IF2Interface{
     F1 f1;
     F2 f2;
 
@@ -37,4 +37,8 @@ public class MainActivity extends AppCompatActivity{
         f2.setMyET(s);
     }
 
+    @Override
+    public void iSend22(String s) {
+        f2.setMyET(s);
+    }
 }
