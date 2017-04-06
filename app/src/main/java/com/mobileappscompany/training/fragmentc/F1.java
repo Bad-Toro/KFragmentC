@@ -44,19 +44,12 @@ public class F1 extends Fragment {
     }
 
     private void sendMyText() {
-        sendWithInterface();
-    }
 
-
-    private void sendWithInterface() {
         IF2Interface mA = (IF2Interface) getActivity();
         mA.iSend22(et1.getText().toString());
     }
 
-    private void sendNoInterface() {
-        MainActivity mA = (MainActivity) getActivity();
-        mA.send22(et1.getText().toString());
-    }
+
 
     public interface IF2Interface{
         public void iSend22(String s);

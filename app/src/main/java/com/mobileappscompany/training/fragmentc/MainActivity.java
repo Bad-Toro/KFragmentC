@@ -16,19 +16,22 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(savedInstanceState != null) return;
-
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
+            f1 = (F1) fm.findFragmentById(R.id.forF1);
+            f2 = (F2) fm.findFragmentById(R.id.forF2);
 
-            f1 = new F1();
-            f2 = new F2();
+            if(f1 == null){
+                f1 = new F1();
+                ft.add(R.id.forF1, f1);
+            }
 
-
-        ft.add(R.id.forF1, f1);
-        ft.add(R.id.forF2, f2);
+            if(f2 == null){
+                f2 = new F2();
+                ft.add(R.id.forF2, f2);
+            }
 
         ft.commit();
 
